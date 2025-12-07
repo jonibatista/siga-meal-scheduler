@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "SIGA Scheduler Extension",
+  "version": "1.0",
+  "description": "Schedules all days in a mounth for SIGA.",
+  "permissions": ["scripting"],
+  "host_permissions": ["https://node3.siga.edubox.pt/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://node3.siga.edubox.pt/webapp/schedules/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
