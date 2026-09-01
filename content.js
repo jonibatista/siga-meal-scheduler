@@ -47,12 +47,6 @@
 
   const observableClassName = "calendar-info-plates";
 
-  const existing = document.querySelector(`.${observableClassName}`);
-  if (existing) {
-    onCalendarPlatesReady(existing);
-    observer.disconnect();
-  }
-
   const observer = new MutationObserver((mutations) => {
     for (const mutation of mutations) {
       for (const node of mutation.addedNodes) {
@@ -73,5 +67,11 @@
     childList: true,
     subtree: true
   });
+
+  const existing = document.querySelector(`.${observableClassName}`);
+  if (existing) {
+    onCalendarPlatesReady(existing);
+    observer.disconnect();
+  }
 
 })();
