@@ -2,9 +2,7 @@
   "manifest_version": 3,
   "name": "SIGA Scheduler Extension",
   "version": "1.0",
-  "description": "Schedules all days in a mounth for SIGA.",
-  "permissions": ["scripting"],
-  "host_permissions": ["https://node3.siga.edubox.pt/*"],
+  "description": "Schedules a month's school meals on SIGA.",
   "content_scripts": [
     {
       "matches": ["https://node3.siga.edubox.pt/webapp/schedules/*"],
