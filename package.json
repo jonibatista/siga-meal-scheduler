@@ -6,7 +6,9 @@
   "scripts": {
     "lint": "eslint .",
     "test": "node --test",
-    "package": "./scripts/package-extension.sh"
+    "package": "./scripts/package-extension.sh",
+    "package:chromium": "./scripts/package-extension.sh chromium",
+    "package:firefox": "./scripts/package-extension.sh firefox"
   },
 
   "devDependencies": {
